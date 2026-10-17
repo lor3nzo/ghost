@@ -1,0 +1,184 @@
+<!--
+  Copyright 2026 Lorenzo Geraci
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GHOST//SHELL 7.0 | Quantum Odyssey</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwMzEwMWQiLz48cGF0aCBkPSJNMzEgNiA5IDMzbDIyIDI1IDI0LTI1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNGFmZmMxIiBzdHJva2Utd2lkdGg9IjQiLz48cGF0aCBkPSJNMzEgMTN2MzhNMTIgMzNoNDBNMTkgMTlsMjYgMjhNNDYgMTkgMTggNDciIHN0cm9rZT0iI2FjOGFmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PGNpcmNsZSBjeD0iMzEiIGN5PSIzMyIgcj0iNyIgZmlsbD0iIzgzZmZmMCIvPjwvc3ZnPg=="><style>
+:root{color-scheme:dark;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#020408;color:#b8ffde}button,input,select{font:inherit}button,select{background:#061d25;color:#aeffe0;border:1px solid #245b59;border-radius:5px;padding:8px 11px;cursor:pointer}button:hover{background:#15463e}button[aria-pressed=true]{background:#14634c}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #73d9ff;outline-offset:2px}#screen{position:fixed;inset:0;width:100%;height:100%;display:block}#shade{position:fixed;inset:0;background:linear-gradient(90deg,#010810ac,transparent 48%,#02040a55);pointer-events:none}#scan{position:fixed;inset:0;pointer-events:none;opacity:.13;background:repeating-linear-gradient(0deg,#000 0px,#000 1px,transparent 2px,transparent 4px)}#hud{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(12px,2vw,26px);pointer-events:none;gap:10px}#hud button,#hud select,#hud input{pointer-events:auto}.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.top{justify-content:space-between;align-items:flex-start}.brand{font-size:clamp(20px,3vw,34px);font-weight:800;letter-spacing:.16em;text-shadow:0 0 20px #40ffbb44}.brand span{color:#48ffc5}.eyebrow{font-size:10px;color:#70a0aa;letter-spacing:.17em}.status{font-size:11px;text-align:right;color:#78efc6}#stage{font-size:clamp(12px,1.8vw,18px);color:#c1acff;letter-spacing:.15em}.bottom{display:flex;gap:12px;align-items:end;justify-content:space-between}.panel{border:1px solid #24575c99;background:#031018b9;backdrop-filter:blur(9px);border-radius:7px;padding:12px;pointer-events:auto}.console{width:min(720px,70vw)}#logs{height:140px;overflow:hidden;white-space:pre;font-size:11px;line-height:1.45;color:#68eabf;mask-image:linear-gradient(transparent,#000 16%)}#command{background:transparent;color:#c5ffe9;border:0;outline:0;flex:1;min-width:60px}#command::placeholder{color:#5d8d90}.data{width:210px}.stat{display:flex;justify-content:space-between;margin:7px 0;font-size:10px}.meter{height:4px;background:#183541;border-radius:3px;overflow:hidden;margin-top:10px}.meter>div{height:100%;width:0;background:linear-gradient(90deg,#2bdcbe,#ae72ff,#fb5aab);transition:width .3s}#hint{position:fixed;bottom:4px;left:0;right:0;text-align:center;font-size:9px;color:#72a0a8;pointer-events:none}.badge{font-size:10px;color:#b8ffe1;border:1px solid #23524d;padding:6px 9px;border-radius:4px;background:#06232b99}#error{display:none;position:fixed;top:40%;left:10%;right:10%;background:#24131c;padding:22px;border:1px solid #c75577;color:#ffd3dc;z-index:10}.subcontrols{margin-top:10px}#audio[aria-pressed=true]{color:#ffbfe9}#intensity{width:82px;accent-color:#a0eacc}#motion{width:68px;accent-color:#a0eacc}#volume{width:85px;accent-color:#ee9bff}#soundscape{max-width:155px}#travel{width:72px;accent-color:#74efff}#viewmode{max-width:145px}#flash{position:fixed;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:0;background:radial-gradient(circle at center,#d5d9ff,transparent 62%);z-index:2}#audioLevel{color:#e6aaff}@media(max-width:760px){#hud{padding:10px}.data{display:none}.console{width:100%}.bottom{width:100%}#logs{height:105px;font-size:9px}.brand{font-size:20px}.status{font-size:9px}#stage{font-size:11px}.eyebrow{font-size:8px}button,select{padding:7px;font-size:10px}#hint{display:none}}@media(prefers-reduced-motion:reduce){#scan{display:none}}
+#hud.minimal .bottom,#hud.minimal .subcontrols,#hud.minimal .eyebrow,#hud.minimal .data{opacity:0;pointer-events:none}#hud.minimal .brand{opacity:.48}#hud.minimal .top{opacity:.58}#hud.minimal .subcontrols *{pointer-events:none}#cinema{position:fixed;inset:0;pointer-events:none;z-index:1;box-shadow:inset 0 0 180px #000b}#letterbox{position:fixed;inset:0;pointer-events:none;z-index:1;border-top:clamp(0px,3vh,30px) solid #010208;border-bottom:clamp(0px,3vh,30px) solid #010208}#transition{position:fixed;inset:0;z-index:2;pointer-events:none;opacity:0;background:radial-gradient(ellipse at center,#fff6,transparent 65%);mix-blend-mode:screen}#hud.minimal{pointer-events:none}#minibadge{color:#edbaff;border-color:#6b3d80}#quality{max-width:100px}@media(prefers-reduced-motion:reduce){#transition{display:none}}
+</style></head><body>
+<canvas id="screen" aria-label="Animated generative science-fiction graphics"></canvas><div id="cinema"></div><div id="letterbox"></div><div id="transition"></div><div id="shade"></div><div id="flash"></div><div id="scan"></div><div id="error" role="alert"></div>
+<main id="hud"><div><div class="row top"><div><div class="brand">GHOST<span>//</span>SHELL <span>∞</span></div><div class="eyebrow">V6.0 · FIRST-PERSON HYPERREALITY ENGINE · SIMULATED SYSTEM</div></div><div class="status"><div id="stage">INITIALIZING QUANTUM FIELD</div><div id="time">00:00:00 · SCENE 0001</div></div></div>
+<div class="row subcontrols"><button id="play" aria-pressed="true">Ⅱ PAUSE</button><button id="jump">↯ REALITY JUMP</button><button id="surge">⚡ CHAOS SURGE</button><button id="audio" aria-pressed="false">♪ AUDIO OFF</button><select id="soundscape" aria-label="Soundscape"><option value="cinematic">CINEMATIC</option><option value="dark">DARK AMBIENT</option><option value="chaos">CHAOS ENGINE</option><option value="ritual">QUANTUM RITUAL</option></select><label class="badge">VOLUME <input id="volume" type="range" min="0" max="100" value="58" aria-label="Audio volume"></label><span id="audioLevel" class="badge" aria-live="off">SFX STANDBY</span><select id="viewmode" aria-label="Camera journey"><option value="journey">FIRST-PERSON FLIGHT</option><option value="drift">ZERO-G DRIFT</option><option value="orbit">ORBITAL DREAM</option></select><label class="badge">TRAVEL <input id="travel" type="range" min="0" max="100" value="67" aria-label="Travel speed"></label><button id="full">⛶ FULLSCREEN</button><button id="focus" title="Hide or show HUD (H)">◈ CINEMA HUD</button><button id="capture" title="Save current image (P)">▣ SNAPSHOT</button><select id="quality" aria-label="GPU quality"><option value="0.65">ECO</option><option value="0.85" selected>BALANCED</option><option value="1">ULTRA</option></select><span class="badge" id="minibadge">ODYSSEY ENGINE v7</span><button id="reset">↻ REBOOT</button><label class="badge">INTENSITY <input id="intensity" type="range" min="0" max="100" value="60" aria-label="Visual intensity"></label><label class="badge">MOTION <input id="motion" type="range" min="0" max="100" value="60" aria-label="Motion intensity"></label></div></div>
+<div class="bottom"><section class="panel console" aria-label="Fictional terminal"><div class="eyebrow">PHANTOM ROOT TERMINAL · FICTIONAL DATA STREAM</div><div id="logs"></div><div class="row"><span style="color:#51eab8">&gt; root@singularity:~#</span><input id="command" placeholder="type anything, press ENTER" autocomplete="off" spellcheck="false" aria-label="Console command"></div></section><aside class="panel data"><div class="eyebrow">REALITY TELEMETRY</div><div class="stat"><span>ACTIVE SPACE</span><strong id="dimensions">4D</strong></div><div class="stat"><span>CHAOS INDEX</span><strong id="chaos">0.00</strong></div><div class="stat"><span>QUANTUM COHERENCE</span><strong id="coherence">99.9%</strong></div><div class="stat"><span>GENERATED SCENES</span><strong id="scenes">1</strong></div><div class="stat"><span>MATHEMATICAL FIELD</span><strong id="geometry">MANDELBULB</strong></div><div class="stat"><span>NEXT MUTATION</span><strong id="next">--</strong></div><div class="meter"><div id="progress"></div></div></aside></div></main><div id="hint">CLICK AUDIO FOR SPATIAL SOUND · USE HEADPHONES · CLICK AUDIO TO START SOUNDTRACK · HEADPHONES RECOMMENDED · SPACE = CHAOS SURGE · R = REALITY JUMP · M = CAMERA MODE · F = FULLSCREEN · NO NETWORK / NO REAL HACKING</div>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id),canvas=$('screen'),gl=canvas.getContext('webgl2',{alpha:false,antialias:false,depth:false,stencil:false,powerPreference:'high-performance'});if(!gl){$('error').style.display='block';$('error').textContent='WebGL2 is unavailable. Open this page in a modern browser with hardware acceleration enabled.';return}
+const vs=`#version 300 es
+in vec2 aPosition;out vec2 uv;void main(){uv=aPosition*.5+.5;gl_Position=vec4(aPosition,0.,1.);}`;
+const fs=`#version 300 es
+precision highp float;
+in vec2 uv;out vec4 frag;
+uniform vec2 resolution;uniform float time,chaos,blend,intensity,motion,impulse;uniform int mode,mode2;uniform vec3 tint,tint2;uniform float seed;uniform float shock;uniform float travel;uniform int cameraMode;
+#define PI 3.14159265
+mat2 rot(float a){float s=sin(a),c=cos(a);return mat2(c,-s,s,c);}
+float hash21(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+vec3 pal(float v,vec3 hue){return .52+.48*cos(6.283*(vec3(.0,.17,.38)+v*.16+hue));}
+float sphere(vec3 p,float r){return length(p)-r;}
+float box3(vec3 p,vec3 b){vec3 d=abs(p)-b;return length(max(d,0.))+min(max(d.x,max(d.y,d.z)),0.);}
+float field(vec3 p,int kind,float tt){
+ vec3 q=p;float c=cos(tt*.1),s=sin(tt*.1);q.xy=rot(tt*.12)*q.xy;q.xz=rot(tt*.08)*q.xz;
+ if(kind==0){ // Mandelbulb-inspired distance estimator
+   vec3 z=q;float dr=1.,r=0.;
+   for(int i=0;i<7;i++){r=length(z);if(r>2.)break;r=max(r,.0001);float theta=acos(clamp(z.z/r,-1.,1.)),phi=atan(z.y,z.x);dr=pow(r,7.)*8.*dr+1.;float zr=pow(r,8.);theta*=8.;phi*=8.;z=zr*vec3(sin(theta)*cos(phi),sin(theta)*sin(phi),cos(theta))+q;}
+   return .5*log(max(r,.0001))*r/max(dr,.0001);
+ }
+ if(kind==1){ // folding kaleidoscope
+  float scale=1.;for(int j=0;j<5;j++){q=abs(q)-vec3(.65,.7,.7);q.xy=rot(.67+tt*.037)*q.xy;q.xz=rot(.4)*q.xz;q*=1.34;scale*=1.34;}return box3(q,vec3(.17))/scale;
+ }
+ if(kind==2){ // recursive torus wormhole
+  float a=atan(q.y,q.x),rr=length(q.xy);float d=length(vec2(rr-1.25,q.z))-.16;d+=.085*sin(a*13.+tt*2.)*sin(q.z*12.-tt);return d;
+ }
+ if(kind==3){ // crystalline lattice
+  vec3 cell=mod(q+1.1,2.2)-1.1;float d=box3(cell,vec3(.19));d=min(d,sphere(cell,.30));return d;
+ }
+ if(kind==4){ // curved nebular ribbons
+  q.xy=rot(q.z*.7+tt*.18)*q.xy;float r=length(q.xy);float theta=atan(q.y,q.x);return abs(r-(.5+.24*sin(theta*7.+q.z*3.-tt)))-.045;
+ }
+ if(kind==8){ // recursive cathedral corridors
+  q.xz=rot(.11*sin(q.y*1.2+tt*.15))*q.xz;
+  vec3 cell=mod(q+vec3(1.8,0.,1.8),vec3(3.6,6.,3.6))-vec3(1.8,0.,1.8);
+  float pillars=length(cell.xz)-(.22+.08*sin(q.y*2.));
+  float arch=length(vec2(abs(cell.x)-1.25,abs(q.y-1.5)-1.2))-.14;
+  return min(pillars,arch);
+ }
+ if(kind==9){ // living DNA helix
+  float a=q.z*2.2-tt*.75;vec2 c=vec2(cos(a),sin(a))*.95;
+  float d=min(length(q.xy-c),length(q.xy+c))-.12;
+  float rung=length(vec2(q.y, q.x))-1.;
+  d=min(d,max(abs(sin(q.z*5.8))-.15,rung*.15));return d;
+ }
+ if(kind==10){ // black-hole accretion torus and event horizon
+  float rr=length(q);float disk=length(vec2(length(q.xz)-1.25,q.y*.65))-.13;
+  disk+=.045*sin(atan(q.z,q.x)*21.-tt*4.);
+  return min(rr-.45,disk);
+ }
+ if(kind==11){ // alien coral of branching trigonometric matter
+  for(int j=0;j<4;j++){q=abs(q)-vec3(.53,.42,.6);q.xz=rot(.83+tt*.025)*q.xz;q.xy=rot(.56)*q.xy;q*=1.3;}
+  return min(length(q.xy)-.12, length(q.yz)-.11)/3.2;
+ }
+ if(kind==6){ // Pulsing labyrinth of gyroid surfaces
+  vec3 v=q*2.1;v.xy=rot(v.z*.38+tt*.12)*v.xy;
+  float gy=sin(v.x)*cos(v.y)+sin(v.y)*cos(v.z)+sin(v.z)*cos(v.x);
+  return abs(gy-.16*sin(tt*.4))*.17-.026;
+ }
+ if(kind==7){ // recursive impossible portal
+  float r=length(q.xy);float a=atan(q.y,q.x);
+  float bands=sin(log(max(r,.03))*10.-tt*1.6+a*9.);
+  return max(abs(bands)*.11-.026,abs(q.z+.33*sin(a*5.+tt))-.12);
+ }
+ // 7D-inspired projection / folded orbital shells (not literal 7D volume)
+ for(int i=0;i<5;i++){q=abs(q)-vec3(.53,.41,.62);q.xy=rot(tt*.02+float(i)*.39)*q.xy;q.yz=rot(float(i)*.51)*q.yz;}
+ return min(box3(q,vec3(.12)),sphere(q,.27));
+}
+vec4 march(vec3 ro,vec3 rd,int kind,vec3 hue,float tt){float dist=0.,glow=0.;vec3 color=vec3(0.);float hit=0.;
+ for(int i=0;i<82;i++){
+ vec3 p=ro+rd*dist;float d=field(p,kind,tt);d=max(abs(d)*.67,.005);glow+=.012/(.02+d*d*40.) *exp(-dist*.09);
+ if(d<.009){vec2 e=vec2(.009,0.);vec3 nor=normalize(vec3(field(p+e.xyy,kind,tt)-field(p-e.xyy,kind,tt),field(p+e.yxy,kind,tt)-field(p-e.yxy,kind,tt),field(p+e.yyx,kind,tt)-field(p-e.yyx,kind,tt)));float light=max(dot(nor,normalize(vec3(.65,.8,-.7))),0.);float rim=pow(1.-abs(dot(nor,rd)),2.);color=pal(dist*.08+tt*.03,hue)*(.28+light*.95+rim*.9);hit=1.;break;}
+ dist+=max(d,.012);if(dist>13.)break;
+ }
+ vec3 fog=pal(tt*.019+length(rd.xy),hue);color=mix(color,fog*.1,.12);color+=fog*min(glow,.9)*.18;return vec4(color,hit);
+}
+void main(){vec2 p=(gl_FragCoord.xy-.5*resolution)/min(resolution.x,resolution.y);float tt=time*motion;
+ float warp=.012*(chaos+impulse)*sin(p.y*12.+tt*1.7);p.x+=warp;
+ float vortexAngle=.025*(chaos+impulse)*exp(-length(p)*1.7)*sin(tt*.4);p=rot(vortexAngle)*p;
+ float shockFront=exp(-abs(length(p)-fract(shock*.24)*1.4)*28.)*min(shock,1.);
+ // The observer travels through the rendered field rather than watching from a static tripod.
+ float journey=tt*travel; float yaw=.32*sin(journey*.21+seed)+.17*sin(journey*.41);
+ float pitch=.18*cos(journey*.19)+.07*sin(journey*.37);
+ vec3 ro=vec3(.72*sin(journey*.31),.57*cos(journey*.27),-3.15+1.35*sin(journey*.16));
+ if(cameraMode==0){ro.z+=.85*sin(journey*.63);yaw+=.38*sin(journey*.15);}
+ if(cameraMode==1){ro=vec3(.48*sin(journey*.17),.55*cos(journey*.13),-3.1+1.5*sin(journey*.09));yaw*=.45;pitch*=.45;}
+ if(cameraMode==2){ro=vec3(3.0*sin(journey*.23),1.3*sin(journey*.13),-3.0*cos(journey*.23));yaw=journey*.23;pitch=.12*sin(journey*.21);}
+ vec3 rd=normalize(vec3(p*1.28,1.65));rd.xy=rot(.17*sin(journey*.32)*travel*motion)*rd.xy;rd.yz=rot(pitch)*rd.yz;rd.xz=rot(yaw)*rd.xz;
+ vec3 col=vec3(.002,.006,.014);float stars=step(.9984,hash21(floor((p+tt*.001)*vec2(880.,610.))));col+=vec3(.23,.43,.48)*stars*pow(hash21(floor(p*900.)),2.);
+ vec4 a=march(ro,rd,mode,tint,tt);col+=a.rgb;
+ if(blend>.001){vec3 r2=normalize(vec3(rot(.24+sin(tt*.09)*.1)*p*1.28,1.65));r2.yz=rot(pitch)*r2.yz;r2.xz=rot(yaw)*r2.xz;vec4 b=march(ro,r2,mode2,tint2,tt+11.);col=mix(col,col*.43+b.rgb*.87,blend*.76);}
+ // Fine energy filaments ripple outward from the observer.
+ float fil=pow(abs(sin(atan(p.y,p.x)*36.+tt*1.7+sin(length(p)*18.-tt*1.3))),22.);
+ col+=pal(tt*.14+length(p),tint2)*fil*.065*(.3+chaos);
+ float rad=length(p);col+=pal(rad+time*.018,tint)*.045*exp(-rad*4.);
+ // Moving radial diffraction and a luminous horizon.
+ float rays=pow(max(0.,sin(atan(p.y,p.x)*61.+tt*.8)),42.);
+ col+=rays*exp(-rad*2.8)*pal(tt*.05,tint)*(.06+.12*chaos);
+ float ring=exp(-abs(rad-(.34+.11*sin(tt*.21)))*37.)*(.05+.15*chaos);col+=ring*pal(tt*.1,tint2);
+ // Chromatic shockwaves, high-energy plasma rings, and spectral diffraction
+ col+=shockFront*pal(length(p)*.5+tt*.24,tint2)*(.3+intensity*.48);
+ float arcs=pow(max(0.,sin(atan(p.y,p.x)*17.+tt*3.2+seed*7.)),16.);
+ col+=arcs*exp(-abs(rad-(.28+.12*sin(tt*.31)))*20.)*pal(tt*.08,tint)*(.04+chaos*.13);
+ vec2 hex=abs(fract(p*vec2(13.,9.)+tt*.009)-.5);
+ col+=step(.48,max(hex.x,hex.y))*.008*chaos;
+ col+=vec3(.04,.025,.08)*impulse*.16*sin(gl_FragCoord.y*.9+tt*12.);
+ col*=1.-.38*smoothstep(.2,1.1,rad);col=1.-exp(-col*(1.+intensity*1.15));col=pow(max(col,0.),vec3(.88));
+ float grain=hash21(gl_FragCoord.xy+fract(time)*113.)-.5;col+=grain*.017;
+ frag=vec4(clamp(col,0.,1.),1.);
+}`;
+function compile(type,source){let s=gl.createShader(type);gl.shaderSource(s,source);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw new Error(gl.getShaderInfoLog(s));return s}
+let prog;try{prog=gl.createProgram();gl.attachShader(prog,compile(gl.VERTEX_SHADER,vs));gl.attachShader(prog,compile(gl.FRAGMENT_SHADER,fs));gl.linkProgram(prog);if(!gl.getProgramParameter(prog,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(prog))}catch(e){$('error').style.display='block';$('error').textContent='Shader compilation failed: '+e.message;return}
+gl.useProgram(prog);let tri=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,tri);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,3,-1,-1,3]),gl.STATIC_DRAW);let aPos=gl.getAttribLocation(prog,'aPosition');gl.enableVertexAttribArray(aPos);gl.vertexAttribPointer(aPos,2,gl.FLOAT,false,0,0);
+const U={};for(let x of ['resolution','time','chaos','blend','intensity','motion','impulse','mode','mode2','tint','tint2','seed','shock','travel','cameraMode'])U[x]=gl.getUniformLocation(prog,x);
+let spatialPan,ambPan;let audioCtx,osc=[],gain,filter,audioOn=false,droneBus,fxBus,delayNode,feedbackNode,noiseBuffer,droneVoices=[],lastAudioEvent=0,audioMode='cinematic',audioVolume=.58,shock=0;
+function audioLevel(){if(!gain||!audioCtx)return;gain.gain.setTargetAtTime(audioOn?audioVolume*.55:0,audioCtx.currentTime,.14)}
+function makeNoise(){let length=audioCtx.sampleRate*2,b=audioCtx.createBuffer(1,length,audioCtx.sampleRate),data=b.getChannelData(0);for(let i=0;i<length;i++)data[i]=Math.random()*2-1;return b}
+function voice(freq,type,amp,detune=0){const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type;o.frequency.value=freq;o.detune.value=detune;g.gain.value=amp;o.connect(g);g.connect(droneBus);o.start();droneVoices.push({o,g,freq});return o}
+function fxTone(freq=160,duration=.4,loud=.16,type='sawtooth',end=35){if(!audioOn||!audioCtx)return;let t=audioCtx.currentTime,o=audioCtx.createOscillator(),g=audioCtx.createGain(),f=audioCtx.createBiquadFilter();f.type='lowpass';f.frequency.value=Math.max(200,freq*3);o.type=type;o.frequency.setValueAtTime(Math.max(20,freq),t);o.frequency.exponentialRampToValueAtTime(Math.max(20,end),t+duration);g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(loud,t+.018);g.gain.exponentialRampToValueAtTime(.0001,t+duration);o.connect(f);f.connect(g);g.connect(spatialPan||fxBus);if(spatialPan&&audioCtx)spatialPan.pan.setTargetAtTime(Math.sin(t*1.9+freq*.01)*.88,t,.045);o.start(t);o.stop(t+duration+.02)}
+function noiseCrash(duration=.7,loud=.14){if(!audioOn||!audioCtx||!noiseBuffer)return;let t=audioCtx.currentTime,source=audioCtx.createBufferSource(),f=audioCtx.createBiquadFilter(),g=audioCtx.createGain();source.buffer=noiseBuffer;f.type='bandpass';f.frequency.setValueAtTime(3500,t);f.frequency.exponentialRampToValueAtTime(180,t+duration);f.Q.value=.5;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(loud,t+.025);g.gain.exponentialRampToValueAtTime(.0001,t+duration);source.connect(f);f.connect(g);g.connect(spatialPan||fxBus);if(spatialPan)spatialPan.pan.setTargetAtTime(Math.sin(t*2.1)*.92,t,.05);source.start(t);source.stop(t+duration+.02)}
+function eventSound(kind='click'){if(!audioOn)return;const mult=audioMode==='chaos'?1.4:audioMode==='dark'?.65:1;
+if(kind==='jump'){fxTone(65,2.2,.22*mult,'sawtooth',820);fxTone(650,1.8,.11*mult,'sine',90);noiseCrash(1.5,.24*mult)}
+else if(kind==='surge'){fxTone(890,.75,.18*mult,'sawtooth',52);fxTone(70,.95,.23*mult,'triangle',29);noiseCrash(.9,.27*mult)}
+else if(kind==='pulse'){fxTone(48,.65,.12*mult,'sine',31);fxTone(240,.4,.05*mult,'sine',110)}
+else {fxTone(270+Math.random()*900,.12,.027*mult,'sine',90+Math.random()*250)}}
+function audioStart(){let AC=window.AudioContext||window.webkitAudioContext;if(!AC){$('audioLevel').textContent='AUDIO UNAVAILABLE';return}audioCtx??=new AC();audioCtx.resume();if(!gain){gain=audioCtx.createGain();gain.gain.value=0;gain.connect(audioCtx.destination);droneBus=audioCtx.createGain();droneBus.gain.value=.3;filter=audioCtx.createBiquadFilter();filter.type='lowpass';filter.frequency.value=300;droneBus.connect(filter);ambPan=audioCtx.createStereoPanner();filter.connect(ambPan);ambPan.connect(gain);fxBus=audioCtx.createGain();fxBus.gain.value=.55;spatialPan=audioCtx.createStereoPanner();spatialPan.connect(fxBus);fxBus.connect(gain);delayNode=audioCtx.createDelay(2);delayNode.delayTime.value=.32;feedbackNode=audioCtx.createGain();feedbackNode.gain.value=.23;fxBus.connect(delayNode);delayNode.connect(feedbackNode);feedbackNode.connect(delayNode);delayNode.connect(gain);noiseBuffer=makeNoise();voice(44,'sine',.23);voice(55,'sawtooth',.038,-7);voice(55,'sawtooth',.038,7);voice(82.4,'triangle',.075);voice(110,'sine',.09);voice(164.8,'sine',.015)}audioLevel();eventSound('jump')}
+function crystallineTone(){if(!audioOn||!audioCtx)return;const scale=[0,3,5,7,10,12,15,19],note=scale[(beatIndex++)%scale.length],frequency=110*Math.pow(2,note/12),t=audioCtx.currentTime;
+ const o=audioCtx.createOscillator(),env=audioCtx.createGain(),pan=audioCtx.createStereoPanner(),f=audioCtx.createBiquadFilter();
+ o.type=audioMode==='ritual'?'triangle':'sine';o.frequency.setValueAtTime(frequency*2,t);o.frequency.exponentialRampToValueAtTime(frequency*.995,t+.5);f.type='lowpass';f.frequency.value=1600;env.gain.setValueAtTime(.0001,t);env.gain.exponentialRampToValueAtTime(audioMode==='ritual'?.055:.026,t+.02);env.gain.exponentialRampToValueAtTime(.0001,t+1.4);pan.pan.value=Math.sin(beatIndex*2.399)*.9;o.connect(f);f.connect(env);env.connect(pan);pan.connect(fxBus);o.start(t);o.stop(t+1.42);
+}
+function audioStop(){if(gain&&audioCtx)gain.gain.setTargetAtTime(0,audioCtx.currentTime,.06)}
+function soundChirp(power=1){if(!audioOn||!audioCtx)return;fxTone(150+Math.random()*700,.22,.048*power,'sine',45+Math.random()*110)}
+const titles=['INSIDE THE QUANTUM CORE','NONLOCAL OBSERVER','VOID FRACTURE','MANDELBULB SINGULARITY','CRYSTALLINE MULTIVERSE','HYPERDIMENSIONAL CASCADE','NEURAL WORMHOLE','SPACETIME BLOOM','LATTICE COLLAPSE','RECURSIVE INFINITY','PARALLEL TOPOLOGY','SPECTRAL RECONSTRUCTION','INFINITE FOLD','RECURSIVE PROTOCOL','ENTANGLED PARADOX','CATHEDRAL OF LIGHT','GENOME OF INFINITY','BLACK HOLE CHOIR','ALIEN CORAL GARDEN','EVENT HORIZON TRANSIT','THE MACHINE DREAMS'];
+const words=['tensor','singularity','hyperplane','eigenstate','manifold','wavefunction','entropy','observer','void','kernel','hologram','neural','lattice','spectral','metamaterial'];
+const pick=a=>a[Math.floor(Math.random()*a.length)],rnd=(a,b)=>a+Math.random()*(b-a),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+let travel=.67,cameraMode=0,quality=.85,focusMode=false,transitionTime=0,arpeggioAt=0,beatIndex=0;let running=true,elapsed=0,phase=0,intensity=.6,motion=.6,chaosImpulse=0,sceneCount=0,scene=null,sceneEnd=0,logs=[],logTime=0,last=0,lastUI=0,lastFrame=0,recent=[];
+function line(s){logs.push(s);if(logs.length>60)logs.shift();$('logs').textContent=logs.slice(-9).join('\n')}
+function fake(){return pick([`> ${pick(words)}.${pick(words)}(${rnd(-1,1).toFixed(8)})`,`[${pick(['SYNC','OK','WARN','VOID','ψ'])}] Q[${Math.floor(rnd(0,16))}] = ${rnd(0,1).toFixed(7)} + ${rnd(0,1).toFixed(7)}i`,`0x${Math.random().toString(16).slice(2,10).toUpperCase()} :: ${pick(words).toUpperCase()}_MATRIX`,`λ ${pick(words)} = ∑ |ψ⟩ ⊗ ${rnd(0,100).toFixed(5)}`])}
+function evolution(){return 1-Math.exp(-elapsed/1200)}
+function nextScene(bump=false){transitionTime=1.25;let n=Math.floor(rnd(0,titles.length));for(let i=0;i<20&&recent.includes(n);i++)n=Math.floor(rnd(0,titles.length));recent.push(n);if(recent.length>5)recent.shift();let modes=[0,1,2,3,4,5,6,7,8,9,10,11],mode=pick(modes),mode2=pick(modes.filter(x=>x!==mode)),tint=Array.from({length:3},()=>rnd(0,1)),tint2=Array.from({length:3},()=>rnd(0,1));scene={title:titles[n],mode,mode2,tint,tint2,seed:rnd(0,6),begin:elapsed,span:rnd(34,83),blend:rnd(.25,.95)};sceneEnd=elapsed+scene.span;sceneCount++;$('stage').textContent=scene.title;$('geometry').textContent=['MANDELBULB','KALEIDOSCOPE','WORMHOLE','LATTICE','NEBULA','7D FOLD','GYROID LABYRINTH','INFINITE PORTAL','FRACTAL CATHEDRAL','DNA CHAMBER','EVENT HORIZON','ALIEN CORAL'][mode];$('dimensions').textContent=(3+Math.floor(rnd(0,Math.min(5,2+evolution()*5))))+'D';line('>>> SCENE '+String(sceneCount).padStart(4,'0')+' :: '+scene.title);line('>>> PROCEDURAL REALITY COMPOSITION COMPLETE');if(bump)chaosImpulse=Math.min(5,chaosImpulse+1.4);shock=2.5;eventSound('jump')}
+function surge(){transitionTime=.48;chaosImpulse=Math.min(5,chaosImpulse+2.2);shock=2.5;for(let i=0;i<12;i++)line(fake());eventSound('surge')}
+$('play').onclick=()=>{running=!running;$('play').textContent=running?'Ⅱ PAUSE':'▶ RESUME';$('play').setAttribute('aria-pressed',String(running))};$('jump').onclick=()=>nextScene(true);$('surge').onclick=surge;
+$('audio').onclick=()=>{audioOn=!audioOn;audioOn?audioStart():audioStop();$('audio').setAttribute('aria-pressed',String(audioOn));$('audio').textContent=audioOn?'♪ AUDIO ON':'♪ AUDIO OFF'};
+$('volume').oninput=e=>{audioVolume=Number(e.target.value)/100;audioLevel()};$('soundscape').onchange=e=>{audioMode=e.target.value;eventSound('jump')};$('full').onclick=()=>{if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.().catch(()=>{})};$('reset').onclick=()=>{elapsed=0;phase=0;chaosImpulse=0;sceneCount=0;logs=[];recent=[];running=true;$('play').textContent='Ⅱ PAUSE';nextScene();};
+$('focus').onclick=()=>{focusMode=!focusMode;$('hud').classList.toggle('minimal',focusMode);$('focus').textContent=focusMode?'◈ SHOW HUD':'◈ CINEMA HUD'};
+$('capture').onclick=()=>{try{draw();let a=document.createElement('a');a.download='ghostshell-odyssey-'+Date.now()+'.png';a.href=canvas.toDataURL('image/png');a.click();line('>>> FRAME CAPTURED')}catch(e){line('>>> CAPTURE UNAVAILABLE: '+e.message)}};
+$('quality').onchange=e=>{quality=Number(e.target.value);resize();line('>>> GPU RENDER SCALE '+quality)};
+$('travel').oninput=e=>travel=Number(e.target.value)/100;$('viewmode').onchange=e=>{cameraMode=['journey','drift','orbit'].indexOf(e.target.value);line('>>> CAMERA NAVIGATION :: '+e.target.selectedOptions[0].textContent);eventSound('pulse')};$('intensity').oninput=e=>intensity=Number(e.target.value)/100;$('motion').oninput=e=>motion=Number(e.target.value)/100;
+$('command').onkeydown=e=>{if(e.key==='Enter'){line('root@singularity:~# '+(e.target.value||'execute'));e.target.value='';surge()}};
+window.addEventListener('keydown',e=>{if(e.target=== $('command')||['INPUT','SELECT','BUTTON'].includes(e.target.tagName))return;if(e.key===' '){e.preventDefault();surge()}else if(e.key.toLowerCase()==='r')nextScene(true);else if(e.key.toLowerCase()==='f')$('full').click();else if(e.key.toLowerCase()==='h')$('focus').click();else if(e.key.toLowerCase()==='p')$('capture').click();else if(e.key.toLowerCase()==='m'){$('viewmode').selectedIndex=(cameraMode+1)%3;$('viewmode').dispatchEvent(new Event('change'));}else if(e.key.length===1){chaosImpulse=Math.min(5,chaosImpulse+.2);line('> OPERATOR INTERVENTION '+e.key.toUpperCase())}});
+let desiredPixelRatio=1;function resize(){desiredPixelRatio=Math.min(window.devicePixelRatio||1,1.4);let r=canvas.getBoundingClientRect(),scale=quality*((r.width*r.height>1800000)?.7:1);canvas.width=Math.max(1,Math.floor(r.width*desiredPixelRatio*scale));canvas.height=Math.max(1,Math.floor(r.height*desiredPixelRatio*scale));gl.viewport(0,0,canvas.width,canvas.height)}window.addEventListener('resize',resize);resize();
+function draw(){if(!scene)return;let power=evolution(),s=scene;gl.uniform2f(U.resolution,canvas.width,canvas.height);gl.uniform1f(U.time,phase);gl.uniform1f(U.chaos,clamp(power*.8+chaosImpulse*.18,0,2));gl.uniform1f(U.blend,clamp((s.blend*(.2+power*.8)+chaosImpulse*.06)*intensity,0,1));gl.uniform1f(U.intensity,intensity);gl.uniform1f(U.motion,motion);gl.uniform1f(U.impulse,chaosImpulse);gl.uniform1i(U.mode,s.mode);gl.uniform1i(U.mode2,s.mode2);gl.uniform3fv(U.tint,s.tint);gl.uniform3fv(U.tint2,s.tint2);gl.uniform1f(U.seed,s.seed);gl.uniform1f(U.shock,shock);gl.uniform1f(U.travel,travel);gl.uniform1i(U.cameraMode,cameraMode);gl.drawArrays(gl.TRIANGLES,0,3)}
+function ui(){let c=clamp(100-evolution()*77-chaosImpulse*4,0,100);$('chaos').textContent=(evolution()*8.8+chaosImpulse*.24).toFixed(2);$('coherence').textContent=c.toFixed(1)+'%';$('scenes').textContent=sceneCount.toLocaleString();$('next').textContent=Math.ceil(Math.max(0,sceneEnd-elapsed))+'s';$('progress').style.width=(evolution()*100).toFixed(1)+'%';let h=Math.floor(elapsed/3600),m=Math.floor(elapsed/60)%60,s=Math.floor(elapsed)%60;$('time').textContent=[h,m,s].map(v=>String(v).padStart(2,'0')).join(':')+' · SCENE '+String(sceneCount).padStart(4,'0');if(audioOn&&audioCtx&&filter){if(ambPan)ambPan.pan.setTargetAtTime(Math.sin(phase*.33)*.62,audioCtx.currentTime,.18);let energy=evolution()+chaosImpulse*.18;filter.frequency.setTargetAtTime(240+Math.sin(phase*.25)*140+energy*580,audioCtx.currentTime,.2);droneVoices.forEach((v,i)=>v.o.frequency.setTargetAtTime(v.freq*(1+energy*.08+Math.sin(phase*(.025+i*.004)+i)*.038),audioCtx.currentTime,.3));$('audioLevel').textContent=audioMode.toUpperCase()+' · '+Math.round(audioVolume*100)+'%'}else $('audioLevel').textContent='SFX STANDBY';$('flash').style.opacity=Math.min(.65,shock*.15).toFixed(3);$('transition').style.opacity=Math.min(.65,transitionTime*.4).toFixed(3)}
+function frame(now){if(!document.body.contains(canvas))return;let dt=Math.min(.08,(now-last)/1000||0);last=now;if(running){elapsed+=dt;phase+=dt;chaosImpulse=Math.max(0,chaosImpulse-dt*.37);shock=Math.max(0,shock-dt*.7);transitionTime=Math.max(0,transitionTime-dt*.8);if(audioOn&&elapsed>arpeggioAt){crystallineTone();arpeggioAt=elapsed+(audioMode==='ritual'?.23:audioMode==='chaos'?.36:audioMode==='dark'?1.3:.65)}if(audioOn&&elapsed-lastAudioEvent>(audioMode==='chaos'?1.1:audioMode==='dark'?5:2.6)){lastAudioEvent=elapsed;eventSound(Math.random()<.3?'pulse':'click')}if(elapsed>sceneEnd)nextScene();logTime+=dt*(2+evolution()*6);if(logTime>.33){let n=Math.min(6,Math.floor(logTime/.33));logTime-=n*.33;for(let i=0;i<n;i++)line(fake())}}if(now-lastUI>200){ui();lastUI=now}if(now-lastFrame>28){draw();lastFrame=now}requestAnimationFrame(frame)}
+line('> GHOST//SHELL 7.0 GPU KERNEL INITIALIZED');line('> Compiling volumetric fractal field...');line('> Initializing cinematic quantum diagnostics...');line('> FICTIONAL SIMULATION / NO NETWORK ACCESS');for(let i=0;i<6;i++)line(fake());nextScene();requestAnimationFrame(frame);
+})();
+</script></body></html>
